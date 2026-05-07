@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>ZERO ARTISTS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<section class="hero">
+
+  <!-- LEFT -->
+
+  <div class="left">
+
+    <div class="lang">
+      <a href="#" id="btn-eng">ENG</a> / 
+      <a href="#" id="btn-es">ES</a>
+    </div>
+
+    <div class="logo">
+      <img src="logo.svg" alt="ZERO ARTISTS">
+    </div>
+
+    <div class="content">
+
+      <div class="hello" id="hello">
+        HELLO!
+      </div>
+
+      <h1 class="title" id="title">
+        ZERO ARTISTS
+      </h1>
+
+      <p class="text" id="description">
+        Independent booking agency dedicated to avant-garde and experimental music.
+        <br><br>
+        Rooted in Valparaíso & Viña del Mar, Chile.
+      </p>
+
+      <div class="email">
+        <a href="mailto:contact@email.com">
+          contact@email.com
+        </a>
+
+        <a href="mailto:booking@email.com">
+          booking@email.com
+        </a>
+      </div>
+
+    </div>
+
+    <div class="socials">
+      <a href="#">IG</a>
+      <a href="#">FB</a>
+      <a href="#">SC</a>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="right">
+    <img src="side-photo.jpg" alt="">
+  </div>
+
+</section>
+
+<script>
+
+const translations = {
+
+  eng: {
+    hello: "HELLO!",
+    title: "ZERO ARTISTS",
+    description: `
+      Independent booking agency dedicated to avant-garde and experimental music.
+      <br><br>
+      Rooted in Valparaíso & Viña del Mar, Chile.
+    `
+  },
+
+  es: {
+    hello: "HOLA!",
+    title: "ZERO ARTISTS",
+    description: `
+      Agencia independiente de booking dedicada a la música avant-garde y experimental.
+      <br><br>
+      Con base en Valparaíso y Viña del Mar, Chile.
+    `
+  }
+
+};
+
+const hello = document.getElementById("hello");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+
+document.getElementById("btn-eng").addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  hello.innerHTML = translations.eng.hello;
+  title.innerHTML = translations.eng.title;
+  description.innerHTML = translations.eng.description;
+
+});
+
+document.getElementById("btn-es").addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  hello.innerHTML = translations.es.hello;
+  title.innerHTML = translations.es.title;
+  description.innerHTML = translations.es.description;
+
+});
+
+</script>
+
+</body>
+</html>
